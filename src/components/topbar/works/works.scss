@@ -1,3 +1,5 @@
+@import "../../../global.scss";
+
 .works{
     background-color: lightgray;
     display: flex;align-items: center;
@@ -8,6 +10,10 @@
         height: 50px;
         position: absolute;
         cursor: pointer;
+
+        @include mobile{
+            display: none;
+        }
 
 
         &.left{
@@ -28,6 +34,12 @@
         left: 0;
         transition: all 1s ease-out;
 
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
+
 
         .container{
             width: 100vw;
@@ -44,6 +56,12 @@
                 align-items: center;
                 justify-content: center;
 
+                @include mobile{
+                    height: 150px;
+                    width: 80%;
+                    margin: 15px 0;
+                }
+
                 .left{
                     flex: 4;
                     height: 80%;
@@ -58,6 +76,11 @@
                         flex-direction: column;
                         justify-content: space-between;
 
+                        @include mobile{
+                            height: 100%;
+                            width: 100%;
+                        }
+
                         .imgContainer{
                             width: 40px;
                             height: 40px;
@@ -67,15 +90,32 @@
                             align-items: center;
                             justify-content: center;
 
+                            @include mobile{
+                                height: 20px;
+                                width: 20px;
+                            }
+
                             img{
                                 width: 25px;
+
+                                @include mobile{
+                                    width: 15px;
+                                }
                             }
                         }
                         h2{
                             font-size: 20px;
+
+                            @include mobile{
+                                font-size: 13px;
+                            }
                         }
                         p{
                             font-size: 13px;
+
+                            @include mobile{
+                                display: none;
+                            }
                         }
                         span{
                             font-size: 12px;
