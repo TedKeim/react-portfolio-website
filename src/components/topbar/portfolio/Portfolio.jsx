@@ -4,10 +4,14 @@ export default function Portfolio() {
     return(
         <div className="portfolio" id="portfolio">
         <h1>My Skills</h1>
-        <ul>
-            <li>Front End</li>
-            <li>Back End</li>
-        </ul>
+        <div className="box">
+       <div className="left">
+           <h3>Front End</h3>
+       </div>
+       <div className="right">
+           <h3>Back End</h3>
+       </div>
+        </div>
         <div className="container">
             <div className="item">
             
